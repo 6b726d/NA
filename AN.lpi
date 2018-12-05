@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="10"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="AN"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="3">
+      <Item1>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="cmdbox"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+    </RequiredPackages>
+    <Units Count="12">
+      <Unit0>
+        <Filename Value="AN.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Main"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="class_reader.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_Reader"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="class_root.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_Root"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="class_integral.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_Integral"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="class_area.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_Area"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="class_differential.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_Differential"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="class_rpolynomials.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_RPolynomials"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="class_lpolynomials.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_LPolynomials"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="class_matrix.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_Matrix"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="specialparse.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SpecialParse"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="class_nlequations.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Class_NLEquations"/>
+      </Unit11>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="AN"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

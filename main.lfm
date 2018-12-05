@@ -1,0 +1,173 @@
+object FormMain: TFormMain
+  Left = 79
+  Height = 600
+  Top = 106
+  Width = 1200
+  Caption = 'Numerical Analysis'
+  ClientHeight = 600
+  ClientWidth = 1200
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.8.4.0'
+  object PanelLeft: TPanel
+    Left = 0
+    Height = 600
+    Top = 0
+    Width = 800
+    Align = alClient
+    ClientHeight = 600
+    ClientWidth = 800
+    TabOrder = 0
+    object Chart1: TChart
+      Left = 1
+      Height = 400
+      Top = 1
+      Width = 798
+      AxisList = <      
+        item
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelFont.Orientation = 900
+          Title.LabelBrush.Style = bsClear
+        end      
+        item
+          Alignment = calBottom
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelBrush.Style = bsClear
+        end>
+      Extent.UseXMax = True
+      Extent.UseXMin = True
+      Extent.UseYMax = True
+      Extent.UseYMin = True
+      Extent.XMax = 10
+      Extent.XMin = -10
+      Extent.YMax = 5
+      Extent.YMin = -5
+      Foot.Brush.Color = clBtnFace
+      Foot.Font.Color = clBlue
+      Title.Brush.Color = clBtnFace
+      Title.Font.Color = clBlue
+      Title.Text.Strings = (
+        'TAChart'
+      )
+      Toolset = ChartToolset1
+      Align = alTop
+      Visible = False
+      object Chart1ConstantLineX: TConstantLine
+        Position = 0
+      end
+      object Chart1ConstantLineY: TConstantLine
+        LineStyle = lsVertical
+        Position = 0
+      end
+      object Chart1RootPoints: TLineSeries
+        Active = False
+        LinePen.Color = clRed
+        Pointer.HorizSize = 6
+        Pointer.Pen.Color = clRed
+        Pointer.Pen.Width = 3
+        Pointer.Style = psCircle
+        Pointer.VertSize = 6
+      end
+      object Chart1CTPoints: TLineSeries
+        Active = False
+        Marks.Format = '%4:.9g'
+        Marks.Style = smsXValue
+        LinePen.Color = clRed
+        Pointer.HorizSize = 6
+        Pointer.Pen.Color = clRed
+        Pointer.Pen.Width = 3
+        Pointer.Style = psCircle
+        Pointer.VertSize = 6
+      end
+    end
+    object CmdBox1: TCmdBox
+      Left = 1
+      Height = 198
+      Top = 401
+      Width = 798
+      Align = alClient
+      CaretColor = clBlack
+      CaretType = cartUser
+      CaretWidth = 1
+      CaretHeight = 15
+      CaretYShift = 3
+      OnInput = CmdBox1Input
+      LineCount = 1000
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clSilver
+      Font.Height = -16
+      Font.Name = 'Arial'
+      BackGroundColor = clWhite
+      TabWidth = 60
+      HistoryMax = 10
+      InputSelColor = clBlue
+      InputSelBackGround = clWhite
+      CaretInterval = 500
+      EscapeCodeType = esctCmdBox
+      GraphicalCharacterWidth = 10
+    end
+  end
+  object PanelRight: TPanel
+    Left = 800
+    Height = 600
+    Top = 0
+    Width = 400
+    Align = alRight
+    ClientHeight = 600
+    ClientWidth = 400
+    TabOrder = 1
+    object StringGrid1: TStringGrid
+      Left = 1
+      Height = 297
+      Top = 1
+      Width = 398
+      Align = alTop
+      ColCount = 3
+      Columns = <      
+        item
+          Title.Caption = 'Name'
+        end      
+        item
+          Title.Caption = 'Value'
+        end      
+        item
+          Title.Caption = 'Type'
+        end>
+      DefaultColWidth = 126
+      FixedCols = 0
+      RowCount = 3
+      TabOrder = 0
+    end
+    object TreeView1: TTreeView
+      Left = 1
+      Height = 301
+      Top = 298
+      Width = 398
+      Align = alClient
+      TabOrder = 1
+    end
+  end
+  object ChartToolset1: TChartToolset
+    left = 484
+    top = 231
+    object ChartToolset1DataPointClickTool1: TDataPointClickTool
+      Shift = [ssLeft]
+      OnPointClick = ChartToolset1DataPointClickTool1PointClick
+    end
+    object ChartToolset1PanDragTool1: TPanDragTool
+      Shift = [ssRight]
+    end
+    object ChartToolset1ZoomClickTool1: TZoomClickTool
+      Shift = [ssCtrl, ssLeft]
+      ZoomFactor = 2
+      ZoomRatio = 2
+    end
+    object ChartToolset1ZoomClickTool2: TZoomClickTool
+      Shift = [ssAlt, ssLeft]
+      ZoomFactor = 0.5
+      ZoomRatio = 0.5
+    end
+  end
+end
